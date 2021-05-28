@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:backgroundColor="@color/colorAccent"
+        app:iconSize="@dimen/spacing_25dp"
+        app:iconTint="@color/colorPrimaryDark"
+        app:iconTintActive="#6A6A6A"
+        app:indicatorColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:textColor="@color/colorPrimaryDark" />
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBar" />
+
+</RelativeLayout>

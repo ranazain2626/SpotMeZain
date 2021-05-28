@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_2dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/spacing_1dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Alert"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMedicationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_marginLeft="@dimen/spacing_10dp"
+            android:layout_marginRight="@dimen/spacing_10dp"
+            android:layout_marginBottom="@dimen/spacing_5dp"
+            android:text="Saved Successfully!"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/vw_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:layout_below="@+id/txtMedicationName"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vw_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:layout_marginBottom="@dimen/spacing_5dp"
+            android:background="@color/white"
+            android:gravity="bottom|center"
+            android:text="Ok"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

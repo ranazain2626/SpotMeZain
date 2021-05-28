@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="11dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Settings"
+            android:textColor="@color/com_facebook_blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:text="Shares" />
+
+                <EditText
+                    android:id="@+id/edtShares"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:text="Share Value" />
+
+                <EditText
+                    android:id="@+id/edtShareValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:drawableRight="@drawable/ic_baseline_attach_money_24"
+                    android:background="@drawable/custom_edit_text"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_20dp"
+            android:background="@drawable/custom_btn_blue"
+            android:gravity="center"
+            android:text="Save"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

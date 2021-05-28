@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.munib.spotme">
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".RequestMoneyActivity"></activity>
+        <activity android:name=".LendMoneyActivity"></activity>
+
+
+        <activity android:name=".OTPActivity"/>
+        <activity android:name=".CounterActivity"/>
+        <activity android:name=".BrowseRequestMoneyActivity"/>
+        <activity
+            android:name=".BrowseActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".PayInstallmentsActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".LoanPayActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".AddCardActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".SendMessageActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".AgreementActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".SearchBusinessActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".PaymentSetupActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".OTPLoginActivity"/>
+        <activity android:name=".SetupPinActivity"/>
+        <activity android:name=".VerifyPinActivity"/>
+        <activity
+            android:name=".CreateBusinessProfileActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".BusinessProfileActivity"
+            android:label="@string/title_activity_main" />
+
+        <activity
+            android:name=".WebviewActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".DashboardLoginLinkActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".MessagesActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="spotme.page.link"
+                    android:scheme="https"/>
+            </intent-filter>
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                -->
+<!--            </intent-filter>-->
+
+        </activity>
+
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="spotme" />
+
+    </application>
+</manifest>
