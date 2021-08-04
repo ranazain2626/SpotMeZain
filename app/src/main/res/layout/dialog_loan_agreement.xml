@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp"
     app:cardCornerRadius="11dp"
-    app:cardElevation="2dp">
+    app:cardElevation="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,14 +66,28 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView26"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Loan Agreement"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Loan Agreement"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/cancel_icon" />
+                </LinearLayout>
 
                 <WebView
                     android:id="@+id/webview"
@@ -168,16 +182,15 @@
         <TextView
             android:id="@+id/sign_agreement_btn"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_50dp"
+            android:layout_height="56dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/spacing_20dp"
             android:background="@drawable/custom_btn"
             android:gravity="center"
             android:text="Sign Agreement"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/continue_btn"

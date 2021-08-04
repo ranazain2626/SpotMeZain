@@ -1,16 +1,12 @@
 package com.munib.spotme;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,20 +15,15 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseAuthMultiFactorException;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.MultiFactorAssertion;
-import com.google.firebase.auth.MultiFactorInfo;
 import com.google.firebase.auth.MultiFactorResolver;
 import com.google.firebase.auth.MultiFactorSession;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.auth.PhoneMultiFactorGenerator;
-import com.google.firebase.auth.PhoneMultiFactorInfo;
 import com.mukesh.OtpView;
 import com.munib.spotme.base.BaseActivity;
 
@@ -87,7 +78,7 @@ public class OTPActivity extends BaseActivity {
                                 }
                             });
 
-        Button verify = findViewById(R.id.verify);
+        Button verify = findViewById(R.id.a);
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

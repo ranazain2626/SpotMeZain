@@ -4,58 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView41"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
-        android:text="Verify OTP"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Please enter the OTP sent to your phone number"
-        android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="308dp"
+            android:background="@drawable/signup_background"
+            android:orientation="vertical">
 
-    <com.mukesh.OtpView
-        android:id="@+id/otp_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:textColor="@color/black"
-        app:OtpItemCount="6"
-        app:OtpLineColor="@color/colorPrimaryDark"
-        app:OtpViewType="line"/>
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Enter confirmation code"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="Please, enter confirmation code, that we send to your mobile phone"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="5dp">
+
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/black"
+                app:OtpItemCount="6"
+                app:OtpLineColor="@color/colorPrimaryDark"
+                app:OtpViewType="line" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/verify"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/spacing_50dp"
+        android:layout_height="56dp"
         android:layout_gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/custom_btn"
         android:gravity="center"
-        android:text="Verify"
+        android:text="Confirm"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@color/background"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
 </LinearLayout>

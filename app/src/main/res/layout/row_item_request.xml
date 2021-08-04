@@ -5,23 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginBottom="@dimen/spacing_12dp"
-    android:orientation="vertical"
-    app:contentPadding="@dimen/spacing_10dp">
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_10dp"
-        android:layout_marginTop="@dimen/spacing_5dp"
-        android:layout_marginEnd="@dimen/spacing_10dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:layout_marginLeft="@dimen/spacing_20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
         android:layout_marginBottom="10dp"
         android:elevation="@dimen/spacing_10dp"
-        app:cardCornerRadius="11dp">
+        app:cardCornerRadius="6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,36 +41,15 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/custom_back_shape"
+                        android:background="@color/colorPrimary"
                         android:padding="5dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_vertical"
-                            android:src="@drawable/ic_baseline_message_24"
-                            android:tint="@color/colorPrimaryDark" />
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:id="@+id/fm1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="50dp"
-                        android:background="@drawable/custom_icon_back1"
-                        android:padding="5dp">
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/txtPrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="1"
-                            android:text="£ 5.00"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp" />
+                            android:src="@drawable/message_icon"
+                            android:tint="@color/white" />
                     </FrameLayout>
 
                     <FrameLayout
@@ -106,16 +81,16 @@
                             android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Muneeb123"
-                            android:textSize="@dimen/font_14" />
+                            android:text="Maximius Roberts (@max...)"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/type"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Borrow Request"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
+                            android:text="Borrow Request" />
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -136,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:el_duration="1000"
-                    app:el_expanded="false"
+                    app:el_expanded="true"
                     app:el_parallax="0.5">
 
 
@@ -156,7 +131,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="20dp"
                             android:orientation="horizontal">
 
                             <LinearLayout
@@ -166,13 +141,42 @@
                                 android:gravity="center"
                                 android:orientation="vertical">
 
+                                <TextView
+                                    android:id="@+id/textView50"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="10dp"
+                                    android:text="Amount" />
+
+                                <FrameLayout
+                                    android:id="@+id/fm1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="false"
+                                    android:layout_marginRight="50dp"
+                                    android:padding="5dp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txtPrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1"
+                                        android:text="$15.00"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="24sp" />
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/spacing_2dp"
-                                    android:paddingStart="@dimen/spacing_5dp"
-                                    android:paddingTop="@dimen/spacing_5dp"
-                                    android:paddingEnd="@dimen/spacing_5dp"
                                     android:text="Interest Rate"
                                     android:textSize="12sp" />
 
@@ -180,27 +184,32 @@
                                     android:id="@+id/interest_rate"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/spacing_2dp"
-                                    android:paddingStart="5dp"
-                                    android:paddingEnd="@dimen/spacing_2dp"
-                                    android:paddingBottom="@dimen/spacing_2dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
                                     android:text="5%"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp" />
                             </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:gravity="center"
                                 android:orientation="vertical">
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_2dp"
-                                    android:paddingStart="@dimen/spacing_5dp"
+                                    android:paddingLeft="10dp"
                                     android:paddingTop="@dimen/spacing_5dp"
                                     android:paddingEnd="@dimen/spacing_5dp"
                                     android:text="Duration"
@@ -210,19 +219,19 @@
                                     android:id="@+id/duration"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:paddingStart="@dimen/spacing_2dp"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingLeft="10dp"
                                     android:paddingEnd="@dimen/spacing_2dp"
                                     android:paddingBottom="@dimen/spacing_2dp"
                                     android:text="6 Months"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="24sp" />
                             </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:gravity="center"
                                 android:orientation="vertical">
 
                                 <androidx.appcompat.widget.AppCompatTextView
@@ -241,12 +250,13 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="@dimen/spacing_2dp"
+                                    android:layout_marginTop="10dp"
                                     android:paddingStart="5dp"
                                     android:paddingEnd="@dimen/spacing_2dp"
                                     android:paddingBottom="@dimen/spacing_2dp"
-                                    android:text="ABC"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:text="$1515.00"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="18sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -258,36 +268,27 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="5dp"
-                            android:background="@drawable/custom_back_shape"
                             android:visibility="visible"
+                            app:cardBackgroundColor="#4154F281"
                             app:cardCornerRadius="11dp"
-                            app:cardElevation="2dp">
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/spacing_10dp"
                                 android:layout_marginEnd="10dp"
                                 android:orientation="horizontal"
                                 android:paddingTop="@dimen/font_10"
                                 android:paddingBottom="@dimen/font_10"
                                 android:weightSum="100">
 
-                                <FrameLayout
+                                <ImageView
                                     android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginStart="10dp"
-                                    android:background="@drawable/custom_icon_back1"
-                                    android:padding="5dp">
-
-                                    <ImageView
-                                        android:layout_width="15dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center|center_vertical"
-                                        android:src="@drawable/asd"
-                                        android:tint="@color/colorPrimaryDark" />
-                                </FrameLayout>
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:layout_marginLeft="15dp"
+                                    android:src="@drawable/asd"
+                                    app:srcCompat="@drawable/payment_icon" />
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -317,15 +318,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp"
-                            android:gravity="right"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/decline_button"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
                                 android:layout_marginRight="10dp"
+                                android:layout_weight="1"
                                 android:background="@drawable/decline_btn"
+                                android:gravity="center"
                                 android:paddingVertical="5dp"
                                 android:text="Decline"
                                 android:textAlignment="center"
@@ -333,24 +335,27 @@
 
                             <TextView
                                 android:id="@+id/counter_btn"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
                                 android:layout_marginRight="10dp"
-                                android:background="@drawable/counter_btn"
+                                android:layout_weight="1"
+                                android:background="@drawable/accept_btn"
+                                android:gravity="center"
                                 android:paddingVertical="5dp"
                                 android:text="Counter"
                                 android:textAlignment="center"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="@color/colorPrimary" />
 
                             <TextView
                                 android:id="@+id/accept_btn"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/accept_btn"
-                                android:paddingVertical="5dp"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_btn"
+                                android:gravity="center"
                                 android:text="Accept"
                                 android:textAlignment="center"
-                                android:textColor="@color/colorPrimary" />
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
                     </LinearLayout>

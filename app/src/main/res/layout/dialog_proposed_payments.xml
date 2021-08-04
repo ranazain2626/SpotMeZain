@@ -27,17 +27,20 @@
                 android:id="@+id/textView38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Proposed Payments"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/black"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Following are the montly return payments"
+                android:gravity="center"
+                android:text="Here is your monthly payment schedule"
+                android:textColor="#A7A7B0"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 

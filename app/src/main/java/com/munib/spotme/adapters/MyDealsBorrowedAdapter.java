@@ -97,7 +97,7 @@ public class MyDealsBorrowedAdapter extends RecyclerView.Adapter<MyDealsBorrowed
         TextView username,upcoming_status;
         TextView price,duration,payment_plan,interest_rate;
         CircleImageView image;
-        TextView report_btn,agreement_btn,extension_btn,rate_lender;
+        TextView report_btn,agreement_btn,rate_lender;
         ExpandableLayout expandableLayout;
         FrameLayout msg;
         LinearLayout next_payment_layout,no_payment_layout;
@@ -118,7 +118,6 @@ public class MyDealsBorrowedAdapter extends RecyclerView.Adapter<MyDealsBorrowed
             payment_plan=itemView.findViewById(R.id.paymentPlan);
             interest_rate=itemView.findViewById(R.id.interest_rate);
 
-            extension_btn=itemView.findViewById(R.id.request_extension);
             report_btn=itemView.findViewById(R.id.report_btn);
             rate_lender=itemView.findViewById(R.id.rate_lender);
             image=itemView.findViewById(R.id.profile_image);

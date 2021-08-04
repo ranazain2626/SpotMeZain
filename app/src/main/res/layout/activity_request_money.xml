@@ -9,43 +9,34 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:background="@drawable/signup_background"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".8"
-                android:orientation="vertical">
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
-                <ImageView
-                    android:id="@+id/back_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Request Money"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:text="Request Money"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="normal" />
 
         </LinearLayout>
 
@@ -56,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_20dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginTop="-250dp"
         android:layout_marginEnd="@dimen/spacing_20dp"
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="11dp"
@@ -68,219 +59,249 @@
             android:layout_margin="20dp"
             android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SpotMe Username" />
-
-            <EditText
-                android:id="@+id/edtUsername"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_50dp"
-                android:layout_marginTop="@dimen/spacing_5dp"
-                android:background="@drawable/custom_edit_text"
-                android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
-                android:drawablePadding="5dp"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:paddingStart="@dimen/spacing_20dp"
-                android:paddingEnd="@dimen/spacing_20dp"
-                android:textColorHint="@color/black"
-                android:textSize="@dimen/font_16" />
-
-            <EditText
-                android:id="@+id/selectedUsername"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_50dp"
-                android:drawablePadding="5dp"
-                android:layout_marginTop="@dimen/spacing_5dp"
-                android:background="@drawable/custom_edit_text"
-                android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
-                android:editable="false"
-                android:focusable="false"
-                android:imeOptions="actionNext"
-                android:inputType="textEmailAddress|textCapSentences"
-                android:paddingStart="@dimen/spacing_20dp"
-                android:paddingEnd="@dimen/spacing_20dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/black"
-                android:textSize="@dimen/font_16"
-                android:visibility="gone" />
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-10dp"
-                android:layout_marginRight="-10dp">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_10dp"
-                        android:text="Amount" />
-
-                    <EditText
-                        android:id="@+id/edtAmount"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_50dp"
-                        android:layout_marginTop="@dimen/spacing_5dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:drawableRight="@drawable/ic_baseline_attach_money_24"
-                        android:imeOptions="actionNext"
-                        android:inputType="number"
-                        android:paddingStart="@dimen/spacing_20dp"
-                        android:paddingEnd="@dimen/spacing_20dp"
-                        android:textColorHint="@color/black"
-                        android:textSize="@dimen/font_16" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_10dp"
-                        android:text="Interest Rate" />
-
-                    <EditText
-                        android:id="@+id/edtInterestRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_50dp"
-                        android:layout_marginTop="@dimen/spacing_5dp"
-                        android:drawableRight="@drawable/percent"
-                        android:background="@drawable/custom_edit_text"
-                        android:drawableTint="#4A4A4A"
-                        android:imeOptions="actionNext"
-                        android:inputType="number"
-                        android:paddingStart="@dimen/spacing_20dp"
-                        android:paddingEnd="@dimen/spacing_20dp"
-                        android:textColorHint="@color/black"
-                        android:textSize="@dimen/font_16" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout_amount_interest"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Amount after interest"
-                        android:textAlignment="center" />
-
-                    <EditText
-                        android:id="@+id/amountAfterLoan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/spacing_50dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/spacing_5dp"
-                        android:background="@drawable/custom_icon_back1"
-                        android:drawablePadding="5dp"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:text="$ 20.00"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textColorHint="@color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_10dp"
-                        android:text="Duration of loan" />
-
-                    <Spinner
-                        android:id="@+id/edtDuration"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_50dp"
-                        android:layout_marginTop="@dimen/spacing_5dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:imeOptions="actionNext"
-                        android:inputType="textEmailAddress|textCapSentences"
-                        android:paddingStart="@dimen/spacing_20dp"
-                        android:paddingEnd="@dimen/spacing_20dp"
-                        android:textColorHint="@color/black"
-                        android:textSize="@dimen/font_16" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/scanner_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/font_10"
-                android:layout_marginBottom="@dimen/font_10"
-                android:orientation="horizontal"
-                android:visibility="gone">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:tint="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/textz"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Place your finger on scanner to validate" />
+                    android:text="SpotMe Username"
+                    android:textAllCaps="true" />
 
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:drawablePadding="5dp"
+                    android:hint="@maximus78"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textColor="@color/cardview_shadow_start_color"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/selectedUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+                    android:drawablePadding="5dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress|textCapSentences"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/font_16"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginRight="-10dp"
+                    android:visibility="gone">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/layout_amount_interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Amount after interest"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/amountAfterLoan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_icon_back1"
+                            android:drawablePadding="5dp"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="$ 20.00"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_10dp"
+                            android:text="Duration of loan" />
+
+                        <Spinner
+                            android:id="@+id/edtDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_edit_text"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress|textCapSentences"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/font_16" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scanner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginBottom="@dimen/font_10"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/textz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Place your finger on scanner to validate" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:text="Amount"
+                    android:textAllCaps="true" />
+
+                <EditText
+                    android:id="@+id/edtAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:hint="$1500"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:text="Interest Rate"
+                    android:textAllCaps="true" />
+
+                <EditText
+                    android:id="@+id/edtInterestRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:drawableTint="#4A4A4A"
+                    android:hint="2%"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:text="Amount After Interest"
+                    android:textAllCaps="true" />
+
+                <EditText
+                    android:id="@+id/edtAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_50dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:hint="$153"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/spacing_20dp"
+                    android:paddingEnd="@dimen/spacing_20dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/font_16" />
             </LinearLayout>
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -350,14 +371,14 @@
         android:layout_height="@dimen/spacing_50dp"
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="160dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_btn"
         android:gravity="center"
-        android:text="Request Now"
+        android:text="Send Request "
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
 </LinearLayout>

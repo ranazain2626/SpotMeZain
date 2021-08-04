@@ -58,7 +58,8 @@
                             android:layout_weight="1"
                             android:text="1"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp" />
+                            android:textSize="24sp"
+                            android:visibility="gone" />
                     </FrameLayout>
 
                     <FrameLayout
@@ -98,7 +99,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Hi! how are you doing. I need to have..."
-                            android:textSize="@dimen/font_12" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
                 </RelativeLayout>

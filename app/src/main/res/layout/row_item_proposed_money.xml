@@ -13,10 +13,11 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
-        app:cardCornerRadius="11dp"
+        app:cardCornerRadius="5dp"
         app:cardPreventCornerOverlap="true">
 
         <LinearLayout
@@ -37,19 +38,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
 
-                    <TextView
-                        android:id="@+id/status"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/fm1"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="10dp"
-                        android:paddingVertical="5dp"
-                        android:text="Pending"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/holo_orange_dark"
-                        android:textSize="12sp" />
-
                     <FrameLayout
                         android:id="@+id/fm1"
                         android:layout_width="wrap_content"
@@ -58,7 +46,6 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_icon_back1"
                         android:padding="5dp">
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -67,7 +54,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:text="£ 5.00"
+                            android:text="$5.00"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="20sp" />
                     </FrameLayout>
@@ -88,7 +75,8 @@
                             android:text="1"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="24sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:visibility="gone" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -107,8 +95,8 @@
                                 android:id="@+id/month"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Borrowed"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:text="June"
+                                android:textColor="@color/black"
                                 android:textSize="18sp" />
 
                         </LinearLayout>
@@ -117,10 +105,28 @@
                             android:id="@+id/due_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Due Date : " />
+                            android:text="6.17.2021" />
 
                     </LinearLayout>
                 </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cardview_shadow_start_color">
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/decline_btn"
+                    android:text="Late"
+                    android:textColor="@color/colorOrange" />
 
 
             </LinearLayout>

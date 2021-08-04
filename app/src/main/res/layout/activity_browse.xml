@@ -9,15 +9,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:background="@drawable/signup_background"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
@@ -26,12 +26,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".8"
-                android:orientation="vertical">
+                android:gravity="left">
 
                 <ImageView
                     android:id="@+id/back_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="left"
                     app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
                 <TextView
@@ -39,11 +40,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
+                    android:paddingLeft="65dp"
                     android:text="Browse Requests"
                     android:textColor="@color/white"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
             </LinearLayout>
 
@@ -82,11 +83,10 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/custom_btn"
             android:gravity="center"
-            android:text="Request Now"
+            android:text="Post Request "
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
