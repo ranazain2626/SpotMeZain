@@ -13,13 +13,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/small_bg"
+                android:background="@drawable/money_backound"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -44,7 +44,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:paddingLeft="-25dp"
-                        android:text="Offers"
+                        android:text="Lend Money"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -205,7 +205,7 @@
                             android:textColor="#A7A7B0"
                             android:textSize="12sp" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/amountAfterLoan"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/spacing_50dp"
@@ -220,6 +220,7 @@
                             android:paddingEnd="@dimen/spacing_20dp"
                             android:textColorHint="@color/black"
                             android:textSize="@dimen/font_16" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -341,9 +342,8 @@
                 android:id="@+id/lend_btn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="230dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/custom_btn"
                 android:gravity="center"

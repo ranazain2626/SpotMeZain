@@ -98,6 +98,27 @@
                             android:text="Lended Request"
                             android:textSize="12sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/wating_icon" />
+
+                            <TextView
+                                android:id="@+id/textView55"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:text="Waiting for approval"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
                     </LinearLayout>
                 </RelativeLayout>
 

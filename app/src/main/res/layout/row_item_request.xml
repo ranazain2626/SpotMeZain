@@ -41,7 +41,8 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/custom_back_shape"
+                        android:backgroundTint="@color/colorPrimary"
                         android:padding="5dp">
 
                         <ImageView
@@ -49,7 +50,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_vertical"
                             android:src="@drawable/message_icon"
-                            android:tint="@color/white" />
+                            android:tint="#FFFFFF" />
                     </FrameLayout>
 
                     <FrameLayout

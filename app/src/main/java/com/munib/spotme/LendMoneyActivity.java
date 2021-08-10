@@ -96,7 +96,7 @@ public class LendMoneyActivity extends BaseActivity {
         rv.setAdapter(adapter);
 
         layout_amount_interest=(CardView) findViewById(R.id.layout_amount_interest);
-        amountAfterLoan=(EditText) findViewById(R.id.amountAfterLoan);
+        amountAfterLoan=findViewById(R.id.amountAfterLoan);
         proposed_payment_card=(CardView) findViewById(R.id.proposed_payment_card);
         proposed_payment_card.setOnClickListener(new View.OnClickListener() {
             @Override
