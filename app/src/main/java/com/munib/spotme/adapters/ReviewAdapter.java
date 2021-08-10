@@ -19,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.munib.spotme.BusinessProfileActivity;
 import com.munib.spotme.MainActivity;
-import com.munib.spotme.MessagesActivity;
 import com.munib.spotme.R;
 import com.munib.spotme.SendMessageActivity;
 import com.munib.spotme.dataModels.BusinessProfileModel;

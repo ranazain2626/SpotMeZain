@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.munib.spotme.BusinessProfileActivity;
 import com.munib.spotme.MainActivity;
-import com.munib.spotme.MessagesActivity;
 import com.munib.spotme.R;
 import com.munib.spotme.SendMessageActivity;
 import com.munib.spotme.dataModels.BusinessProfileModel;
@@ -86,7 +86,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Restau
 
     public class RestaurantViewHolder extends RecyclerView.ViewHolder {
         TextView user_name,last_text,notifcation_count;
-        CardView cardView;
+        LinearLayout cardView;
         ImageView imageView;
         FrameLayout fm1;
 
@@ -125,6 +125,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Restau
                         {
 
                         }
+                        notifyDataSetChanged();
                     } else {
 
                     }
@@ -142,11 +143,11 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Restau
                 @Override
                 public void onClick(View view) {
                     Intent a=new Intent(mContext, SendMessageActivity.class);
-                    a.putExtra("uid1",((MessagesActivity) mContext).auth.getCurrentUser().getUid());
+                    a.putExtra("uid1",((MainActivity) mContext).auth.getCurrentUser().getUid());
                     a.putExtra("uid2",restaurant.getChat_with());
                     a.putExtra("thread_id",restaurant.getThread_id());
                     a.putExtra("count",restaurant.getNotification_count());
-                    ((MessagesActivity) mContext).startActivity(a);
+                    ((MainActivity) mContext).startActivity(a);
                 }
             });
         }

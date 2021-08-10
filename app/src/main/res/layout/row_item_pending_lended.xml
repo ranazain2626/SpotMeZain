@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             android:weightSum="1">
 
@@ -53,9 +54,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_vertical"
-                            android:src="@drawable/ic_baseline_message_24"
-                            android:tint="#FFFFFF"
-                            app:srcCompat="@drawable/message_icon" />
+                            app:tint="#FFFFFF"
+                            android:src="@drawable/message_icon" />
                     </FrameLayout>
 
                     <FrameLayout
@@ -89,14 +89,14 @@
                             android:layout_height="wrap_content"
                             android:text="Maximius Roberts (@max...)"
                             android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/type"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lended Request"
-                            android:textSize="16sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -110,8 +110,8 @@
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="15dp"
                         android:background="@color/cardview_shadow_start_color">
 
                     </FrameLayout>
@@ -119,7 +119,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="15dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -127,8 +127,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="5dp">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/textView53"
@@ -141,11 +140,10 @@
                                 android:id="@+id/txtPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
                                 android:layout_weight="1"
                                 android:text="£ 5.00"
                                 android:textColor="@color/colorPrimary"
-                                android:textSize="24sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -157,10 +155,6 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/spacing_2dp"
-                                android:paddingStart="@dimen/spacing_5dp"
-                                android:paddingTop="@dimen/spacing_5dp"
-                                android:paddingEnd="@dimen/spacing_5dp"
                                 android:text="Interest Rate"
                                 android:textSize="12sp" />
 
@@ -168,10 +162,9 @@
                                 android:id="@+id/interest_rate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
                                 android:text="5%"
                                 android:textColor="@color/colorPrimary"
-                                android:textSize="24sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -179,6 +172,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -190,10 +184,6 @@
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/spacing_2dp"
-                                android:paddingStart="@dimen/spacing_5dp"
-                                android:paddingTop="@dimen/spacing_5dp"
-                                android:paddingEnd="@dimen/spacing_5dp"
                                 android:text="Duration"
                                 android:textSize="12sp" />
 
@@ -201,10 +191,9 @@
                                 android:id="@+id/duration"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
                                 android:text="6 Months"
                                 android:textColor="@color/colorPrimary"
-                                android:textSize="24sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -217,10 +206,6 @@
                                 android:id="@+id/txtdDt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/spacing_2dp"
-                                android:paddingStart="@dimen/spacing_5dp"
-                                android:paddingTop="@dimen/spacing_5dp"
-                                android:paddingEnd="@dimen/spacing_5dp"
                                 android:text="Total with Interest"
                                 android:textSize="12sp" />
 
@@ -228,10 +213,9 @@
                                 android:id="@+id/paymentPlan"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
                                 android:text="ABC"
                                 android:textColor="@color/colorPrimary"
-                                android:textSize="24sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -245,7 +229,7 @@
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="0.5dp"
                         android:background="@color/cardview_shadow_start_color">
 
                     </FrameLayout>
@@ -254,15 +238,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="5dp"
                         android:gravity="right"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/decline_button"
-                            android:layout_width="130dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
                             android:background="@drawable/decline_btn"
                             android:gravity="center"
                             android:paddingVertical="5dp"
@@ -272,29 +256,32 @@
 
                         <TextView
                             android:id="@+id/payments_btn"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/accept_btn"
                             android:gravity="center"
                             android:paddingVertical="5dp"
                             android:text="Proposed Payments"
                             android:textAlignment="center"
-                            android:textColor="@color/colorPrimaryDark" />
-
-                        <TextView
-                            android:id="@+id/pay_btn"
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/accept_btn"
-                            android:paddingVertical="5dp"
-                            android:text="Pay Now"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:visibility="gone" />
+                            android:textColor="@color/colorPrimary" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pay_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:gravity="center"
+                        android:paddingVertical="5dp"
+                        android:text="Pay Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
 
 
                 </LinearLayout>

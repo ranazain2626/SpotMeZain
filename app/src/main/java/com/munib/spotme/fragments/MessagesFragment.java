@@ -1,4 +1,4 @@
-package com.munib.spotme;
+package com.munib.spotme.fragments;
 
 import android.media.Image;
 import android.os.Bundle;
@@ -29,13 +29,14 @@ import com.munib.spotme.dataModels.MessageModel;
 import com.munib.spotme.dataModels.OffersModel;
 import com.munib.spotme.dataModels.ThreadModel;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
 import static com.munib.spotme.utils.CommonUtils.TAGZ;
 
-public class MessagesActivity extends BaseActivity {
+public class MessagesFragment extends BaseFragment {
     RecyclerView recyclerView;
     ArrayList<DataModel> dataModels;
     ArrayList<ThreadModel> arrayList;
@@ -43,25 +44,26 @@ public class MessagesActivity extends BaseActivity {
     TextView no_msg_txt;
 
 
+    @androidx.annotation.Nullable
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_messages);
+    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @androidx.annotation.Nullable @Nullable ViewGroup container, @androidx.annotation.Nullable @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.activity_messages, container, false);
+
+        return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull @NotNull View view, @androidx.annotation.Nullable @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         arrayList=new ArrayList<ThreadModel>();
 
-        ImageView back_btn=findViewById(R.id.back_btn);
-        back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-        no_msg_txt=findViewById(R.id.no_msg_txt);
-        recyclerView=findViewById(R.id.rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        no_msg_txt=view.findViewById(R.id.no_msg_txt);
+        recyclerView=view.findViewById(R.id.rv);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter=new MessagesAdapter(this,arrayList);
+        adapter=new MessagesAdapter(getActivity(),arrayList);
         recyclerView.setAdapter(adapter);
     }
 
@@ -101,4 +103,8 @@ public class MessagesActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void injectView() {
+
+    }
 }

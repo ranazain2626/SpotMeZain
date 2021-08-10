@@ -98,7 +98,6 @@ public class BrowseActivity extends BaseActivity {
                     if (dataSnapshot.exists()) {
                         arrayList.clear();
 
-                        Log.d("mubi",dataSnapshot.toString());
                         for (DataSnapshot datas : dataSnapshot.getChildren()) {
                             Log.d(TAGZ, datas.toString());
                             OffersModel offer = datas.getValue(OffersModel.class);

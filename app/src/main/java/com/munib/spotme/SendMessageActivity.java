@@ -41,7 +41,7 @@ public class SendMessageActivity extends BaseActivity {
     String thread="",selected_user_token="";
     int count=0;
     MessagesListAdapter<Message> adapter;
-    TextView username;
+    TextView username,name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,12 +78,14 @@ public class SendMessageActivity extends BaseActivity {
 
 
         username=(TextView) findViewById(R.id.username);
+        name=(TextView) findViewById(R.id.name);
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users");
         ref.child(uid2).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    username.setText("(@"+dataSnapshot.child("username").getValue()+") "+dataSnapshot.child("name").getValue());
+                    username.setText("@"+dataSnapshot.child("username").getValue());
+                    name.setText(dataSnapshot.child("name").getValue().toString());
                     selected_user_token=dataSnapshot.child("device_token").getValue().toString();
 
                 } else {

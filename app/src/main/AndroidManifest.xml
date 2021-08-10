@@ -11,9 +11,10 @@
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity android:name=".RequestMoneyActivity"></activity>
+        <activity android:name=".RequestsActivity"></activity>
         <activity android:name=".LendMoneyActivity"></activity>
 
 

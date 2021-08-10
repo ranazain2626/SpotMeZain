@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/signup_background"
+        android:background="@drawable/small_bg"
         android:orientation="vertical">
 
         <LinearLayout
@@ -56,11 +56,8 @@
         android:id="@+id/covid_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/spacing_20dp"
-        android:layout_marginTop="-350dp"
-        android:layout_marginEnd="@dimen/spacing_20dp"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="11dp"
+        android:layout_marginTop="-130dp"
+        app:cardCornerRadius="30dp"
         app:cardElevation="2dp">
 
         <LinearLayout

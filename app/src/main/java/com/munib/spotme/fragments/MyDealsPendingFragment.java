@@ -46,7 +46,7 @@ public class MyDealsPendingFragment extends BaseFragment{
     ArrayList<OffersModel> arrayList,arrayList1;
     MyDealsPendingLendAdapter adapter;
     MyDealsPendingBorrowAdapter adapter1;
-    TextView no_data_found,no_data_found1;
+    TextView no_data_found;
     Stripe stripe;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -61,7 +61,6 @@ public class MyDealsPendingFragment extends BaseFragment{
 
 
         no_data_found=(TextView) root.findViewById(R.id.no_data_found);
-        no_data_found1=(TextView) root.findViewById(R.id.no_data_found1);
 
         recyclerView=root.findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -135,13 +134,12 @@ public class MyDealsPendingFragment extends BaseFragment{
                             OffersModel offer = datas.getValue(OffersModel.class);
                             offer.setOffer_uid(datas.getKey());
                             if(offer.getStatus()==0 || offer.getStatus()==1) {
-                                no_data_found1.setVisibility(View.GONE);
                                 arrayList1.add(offer);
                             }
                         }
                         adapter1.notifyDataSetChanged();
                     } else {
-                        no_data_found1.setVisibility(View.VISIBLE);
+                   //     no_data_found1.setVisibility(View.VISIBLE);
                         Log.d("mubi","yes");
                         arrayList1.clear();
                         adapter1.notifyDataSetChanged();
@@ -151,7 +149,7 @@ public class MyDealsPendingFragment extends BaseFragment{
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
                     Log.d(TAGZ, error.getDetails());
-                     no_data_found1.setVisibility(View.VISIBLE);
+                 //    no_data_found1.setVisibility(View.VISIBLE);
 
                 }
             });

@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             android:weightSum="1">
 
@@ -53,9 +54,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_vertical"
-                            android:src="@drawable/ic_baseline_message_24"
                             android:tint="#FFFFFF"
-                            app:srcCompat="@drawable/message_icon" />
+                            android:src="@drawable/message_icon" />
                     </FrameLayout>
 
                     <TextView
@@ -107,51 +107,31 @@
                         <TextView
                             android:id="@+id/username"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="50dp"
                             android:text="Maximius Roberts"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/type"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Borrow Request"
-                            android:textSize="@dimen/font_16" />
+                            android:textSize="@dimen/font_12" />
 
                     </LinearLayout>
                 </RelativeLayout>
 
 
                 <TextView
-                    android:id="@+id/textView51"
+                    android:id="@+id/request_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:text="Need to get by with my 2 year old. Recently became homeless and staying in hotel. Till i get my job in a month"
-                    android:textColor="#3D3D3D"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/request_msg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/font_14" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="Click to view details &amp; actions"
-                    android:textSize="@dimen/font_10" />
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
 
                 <net.cachapa.expandablelayout.ExpandableLayout
                     android:id="@+id/expandable_layout"
@@ -169,8 +149,8 @@
 
                         <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="15dp"
                             android:background="@color/cardview_shadow_start_color">
 
                         </FrameLayout>
@@ -178,7 +158,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="15dp"
                             android:orientation="horizontal">
 
                             <LinearLayout
@@ -187,25 +167,23 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginRight="10dp"
                                 android:layout_weight="1"
-                                android:orientation="vertical"
-                                android:padding="5dp">
+                                android:orientation="vertical">
 
                                 <TextView
                                     android:id="@+id/textView52"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Amount" />
+                                    android:text="Amount"
+                                    android:textSize="@dimen/font_14" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/txtPrice"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
                                     android:layout_weight="1"
                                     android:text="£ 5.00"
                                     android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -217,25 +195,16 @@
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/spacing_2dp"
-                                    android:paddingStart="@dimen/spacing_5dp"
-                                    android:paddingTop="@dimen/spacing_5dp"
-                                    android:paddingEnd="@dimen/spacing_5dp"
                                     android:text="Interest Rate"
-                                    android:textSize="12sp" />
+                                    android:textSize="14sp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/interest_rate"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/spacing_2dp"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingStart="5dp"
-                                    android:paddingEnd="@dimen/spacing_2dp"
-                                    android:paddingBottom="@dimen/spacing_2dp"
                                     android:text="5%"
                                     android:textColor="@color/colorPrimary"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -243,6 +212,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
                             android:orientation="horizontal">
 
                             <LinearLayout
@@ -255,25 +225,15 @@
                                     android:id="@+id/txtdDt"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/spacing_2dp"
-                                    android:paddingStart="@dimen/spacing_5dp"
-                                    android:paddingTop="@dimen/spacing_5dp"
-                                    android:paddingEnd="@dimen/spacing_5dp"
-                                    android:text="Total with Interest"
-                                    android:textSize="12sp" />
+                                    android:text="Total with Interest" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/paymentPlan"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/spacing_2dp"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingStart="5dp"
-                                    android:paddingEnd="@dimen/spacing_2dp"
-                                    android:paddingBottom="@dimen/spacing_2dp"
                                     android:text="ABC"
                                     android:textColor="@color/colorPrimary"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -285,45 +245,33 @@
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/spacing_2dp"
-                                    android:paddingStart="@dimen/spacing_5dp"
-                                    android:paddingTop="@dimen/spacing_5dp"
-                                    android:paddingEnd="@dimen/spacing_5dp"
-                                    android:text="Duration"
-                                    android:textSize="12sp" />
+                                    android:text="Duration" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/duration"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingStart="@dimen/spacing_2dp"
-                                    android:paddingEnd="@dimen/spacing_2dp"
-                                    android:paddingBottom="@dimen/spacing_2dp"
                                     android:text="6 Months"
                                     android:textColor="@color/colorPrimary"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/proposed_payment_card"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="2dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
                             android:layout_marginBottom="5dp"
                             android:visibility="visible"
                             app:cardBackgroundColor="#E9FFF2"
-                            app:cardCornerRadius="11dp"
-                            app:cardElevation="2dp">
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginStart="@dimen/spacing_10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="20dp"
                                 android:layout_marginEnd="10dp"
                                 android:orientation="horizontal"
                                 android:paddingTop="@dimen/font_10"

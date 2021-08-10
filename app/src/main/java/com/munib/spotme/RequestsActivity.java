@@ -1,4 +1,4 @@
-package com.munib.spotme.fragments;
+package com.munib.spotme;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -19,39 +19,37 @@ import com.google.firebase.database.ValueEventListener;
 import com.munib.spotme.R;
 import com.munib.spotme.adapters.OffersAdapter;
 import com.munib.spotme.adapters.RequestsAdapter;
+import com.munib.spotme.base.BaseActivity;
 import com.munib.spotme.base.BaseFragment;
 import com.munib.spotme.dataModels.DataModel;
 import com.munib.spotme.dataModels.OffersModel;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
 import static com.munib.spotme.utils.CommonUtils.TAGZ;
 
-public class RequestsFragment extends BaseFragment{
+public class RequestsActivity extends BaseActivity {
     RecyclerView recyclerView;
     ArrayList<DataModel> dataModels;
     ArrayList<OffersModel> arrayList;
     RequestsAdapter adapter;
     TextView no_data_found;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_requests, container, false);
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_requests);
         arrayList=new ArrayList<OffersModel>();
 
-        no_data_found=(TextView) root.findViewById(R.id.no_data_found);
+        no_data_found=(TextView) findViewById(R.id.no_data_found);
 
-        recyclerView=root.findViewById(R.id.rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView=findViewById(R.id.rv);
+        recyclerView.setLayoutManager(new LinearLayoutManager(RequestsActivity.this));
 
-        adapter=new RequestsAdapter(getActivity(),arrayList);
+        adapter=new RequestsAdapter(RequestsActivity.this,arrayList);
         recyclerView.setAdapter(adapter);
-        return root;
-    }
-
-    @Override
-    protected void injectView() {
-
     }
 
     @Override

@@ -13,6 +13,10 @@ public class ThreadModel {
         this.notification_count=notification_count;
     }
 
+    public void setLast_message(String last_message) {
+        this.last_message = last_message;
+    }
+
     public int getNotification_count() {
         return notification_count;
     }

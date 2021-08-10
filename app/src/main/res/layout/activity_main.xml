@@ -6,18 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <me.ibrahimsn.lib.SmoothBottomBar
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        app:backgroundColor="@color/colorAccent"
-        app:iconSize="@dimen/spacing_25dp"
-        app:iconTint="@color/colorPrimaryDark"
-        app:iconTintActive="#6A6A6A"
-        app:indicatorColor="@color/white"
-        app:menu="@menu/bottom_nav_menu"
-        app:textColor="@color/colorPrimaryDark" />
+        app:backgroundTint="@color/white"
+        app:itemIconTint="@drawable/bottom_nav_color"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+<!--    <me.ibrahimsn.lib.SmoothBottomBar-->
+<!--        android:id="@+id/bottomBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:backgroundColor="@color/white"-->
+<!--        app:iconSize="@dimen/spacing_25dp"-->
+<!--        app:iconTint="@color/gray"-->
+<!--        app:iconTintActive="#6A6A6A"-->
+<!--        app:indicatorColor="@color/colorPrimary"-->
+<!--        app:menu="@menu/bottom_nav_menu"-->
+<!--        app:textColor="@color/colorPrimary" />-->
 
     <FrameLayout
         android:id="@+id/fl_container"

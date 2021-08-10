@@ -66,7 +66,7 @@ public class LendMoneyActivity extends BaseActivity {
     ArrayList<UserModel> arrayList;
     Spinner duration;
     Boolean selected=false,signed=false;
-    LinearLayout layout_amount_interest;
+    CardView layout_amount_interest;
     TextView amountAfterLoan;
     CardView proposed_payment_card;
     String url="",selected_user_token="";
@@ -95,7 +95,7 @@ public class LendMoneyActivity extends BaseActivity {
         adapter=new SearchSpotMeUsersAdapter(this,arrayList);
         rv.setAdapter(adapter);
 
-        layout_amount_interest=(LinearLayout) findViewById(R.id.layout_amount_interest);
+        layout_amount_interest=(CardView) findViewById(R.id.layout_amount_interest);
         amountAfterLoan=(EditText) findViewById(R.id.amountAfterLoan);
         proposed_payment_card=(CardView) findViewById(R.id.proposed_payment_card);
         proposed_payment_card.setOnClickListener(new View.OnClickListener() {

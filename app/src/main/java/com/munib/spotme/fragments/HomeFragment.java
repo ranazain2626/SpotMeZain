@@ -52,10 +52,10 @@ import com.munib.spotme.DashboardLoginLinkActivity;
 import com.munib.spotme.LendMoneyActivity;
 import com.munib.spotme.LoginActivity;
 import com.munib.spotme.MainActivity;
-import com.munib.spotme.MessagesActivity;
 import com.munib.spotme.PaymentSetupActivity;
 import com.munib.spotme.R;
 import com.munib.spotme.RequestMoneyActivity;
+import com.munib.spotme.RequestsActivity;
 import com.munib.spotme.SendMessageActivity;
 import com.munib.spotme.SignupActivity;
 import com.munib.spotme.SplashActivity;
@@ -104,7 +104,7 @@ import static com.munib.spotme.utils.CommonUtils.TAGZ;
 
 public class HomeFragment extends BaseFragment {
 
-    CardView request_card,lend_card,payment_setup,browse_card;
+    CardView request_card,lend_card,payment_setup,browse_card,card_request;
     TextView payment_setup_status;
     FrameLayout btn_messages;
     TextView total_loaned,total_borrowed,name;
@@ -149,6 +149,15 @@ public class HomeFragment extends BaseFragment {
         {
         }
 
+
+        card_request=(CardView) root.findViewById(R.id.card_request);
+        card_request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getActivity(), RequestsActivity.class));
+            }
+        });
         browse_card=(CardView) root.findViewById(R.id.browse_card);
         browse_card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,23 +197,23 @@ public class HomeFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             }
         });
-        btn_messages=root.findViewById(R.id.btn_messages);
-        btn_messages.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                new PaymentMethodsActivityStarter(getActivity()).startForResult(new PaymentMethodsActivityStarter.Args.Builder()
-//                        .setShouldShowGooglePay(true)
-//                        .build());
-                startActivity(new Intent(getActivity(), MessagesActivity.class));
-            }
-        });
+//        btn_messages=root.findViewById(R.id.btn_messages);
+//        btn_messages.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                new PaymentMethodsActivityStarter(getActivity()).startForResult(new PaymentMethodsActivityStarter.Args.Builder()
+////                        .setShouldShowGooglePay(true)
+////                        .build());
+//                startActivity(new Intent(getActivity(), MessagesActivity.class));
+//            }
+//        });
         request_card=(CardView) root.findViewById(R.id.request_card);
         request_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 Boolean charges_enabled = preferences.getBoolean("charges_enabled", false);
-                if(charges_enabled){
+                if(!charges_enabled){
                     startActivity(new Intent(getActivity(), RequestMoneyActivity.class));
                 }else{
                     showMessage("Please activate your payment setup before making a request to someone");
@@ -218,7 +227,7 @@ public class HomeFragment extends BaseFragment {
             public void onClick(View view) {
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 Boolean charges_enabled = preferences.getBoolean("charges_enabled", false);
-                if(charges_enabled){
+                if(!charges_enabled){
                     startActivity(new Intent(getActivity(), LendMoneyActivity.class));
                 }else{
                     showMessage("Please activate your payment setup before making a request to someone");

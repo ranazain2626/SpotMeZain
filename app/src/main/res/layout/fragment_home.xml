@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
     android:orientation="vertical"
     tools:context=".fragments.HomeFragment">
 
@@ -19,7 +20,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="450dp"
                 android:background="@drawable/signup_background"
                 android:orientation="vertical">
 
@@ -152,260 +153,198 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="130dp"
-                    android:gravity="center"
-                    android:text="WALLET"
-                    android:textColor="#FFFFFF" />
-
-                <TextView
-                    android:id="@+id/textView47"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
-                    android:gravity="center"
-                    android:text="$800,000.00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="32sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="220dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/spacing_20dp"
-                        android:layout_marginEnd="@dimen/spacing_5dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_weight="1"
-                        app:cardBackgroundColor="#1AFFFFFF"
-                        app:cardCornerRadius="5dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/total_loaned"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="LOAND"
-                                android:textColor="@color/white"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$0.00"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/spacing_5dp"
-                        android:layout_marginEnd="@dimen/spacing_20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_weight="1"
-                        app:cardBackgroundColor="#1AFFFFFF"
-                        app:cardCornerRadius="5dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/total_borrowed"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="BORROWED"
-                                android:textColor="@color/white"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$100.00"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="300dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/spacing_20dp"
-                        android:layout_marginEnd="@dimen/spacing_5dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_weight="1"
-                        app:cardBackgroundColor="#1AFFFFFF"
-                        app:cardCornerRadius="5dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/total_loaned"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="LOAND"
-                                android:textColor="@color/white"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$0.00"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/spacing_5dp"
-                        android:layout_marginEnd="@dimen/spacing_20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_weight="1"
-                        app:cardBackgroundColor="#1AFFFFFF"
-                        app:cardCornerRadius="5dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/total_borrowed"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="BORROWED"
-                                android:textColor="@color/white"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$100.00"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/payment_setup_pending"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_20dp"
-                android:layout_marginEnd="@dimen/spacing_20dp"
-                android:layout_marginBottom="@dimen/spacing_20dp"
-                android:visibility="gone"
-                app:cardCornerRadius="11dp"
-                app:cardElevation="2dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/spacing_10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal"
-                    android:paddingTop="@dimen/font_10"
-                    android:paddingBottom="@dimen/font_10"
-                    android:weightSum="100">
-
-                    <FrameLayout
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:background="@drawable/custom_icon_back_orange"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|center_vertical"
-                            android:src="@drawable/asd"
-                            android:tint="@android:color/holo_orange_dark" />
-                    </FrameLayout>
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/payment_status"
-                        android:layout_width="0dp"
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_weight="100"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/font_10"
-                        android:text="Payment Setup Pending"
-                        android:textColor="@android:color/holo_orange_dark"
-                        android:textSize="18sp" />
+                        android:layout_marginTop="130dp"
+                        android:gravity="center"
+                        android:text="WALLET"
+                        android:textColor="#FFFFFF" />
 
-                    <ImageView
-                        android:id="@+id/settings_right_icon_1"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="5"
-                        android:autoMirrored="true"
-                        android:src="@drawable/ic_baseline_chevron_right_24"
-                        android:tint="@android:color/holo_orange_dark" />
+                        android:gravity="center"
+                        android:text="$800,000.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/spacing_20dp"
+                            android:layout_marginEnd="@dimen/spacing_5dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#1AFFFFFF"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/total_loaned"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="LOAND"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_5dp"
+                            android:layout_marginEnd="@dimen/spacing_20dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#1AFFFFFF"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/total_borrowed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="BORROWED"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$100.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/spacing_20dp"
+                            android:layout_marginEnd="@dimen/spacing_5dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#1AFFFFFF"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/offers_icon" />
+
+                                <TextView
+                                    android:id="@+id/textView14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Offers"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="@dimen/spacing_20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#1AFFFFFF"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView26"
+                                    android:layout_width="24dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/requests_icon1" />
+
+                                <TextView
+                                    android:id="@+id/textView14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Requests"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -439,7 +378,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
                             android:paddingLeft="5dp"
-                            android:paddingTop="10dp"
+                            android:paddingTop="5dp"
                             android:paddingRight="5dp">
 
                             <ImageView
@@ -461,7 +400,7 @@
                             android:text="BROWSE"
                             android:textAlignment="center"
                             android:textColor="@color/cardview_dark_background"
-                            android:textSize="16sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -489,7 +428,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
                             android:paddingLeft="5dp"
-                            android:paddingTop="10dp"
+                            android:paddingTop="5dp"
                             android:paddingRight="5dp">
 
                             <ImageView
@@ -511,7 +450,7 @@
                             android:text="LEND"
                             android:textAlignment="center"
                             android:textColor="@color/cardview_dark_background"
-                            android:textSize="16sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -539,6 +478,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
                             android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
                             android:paddingRight="5dp">
 
                             <ImageView
@@ -559,7 +499,7 @@
                             android:text="REQUEST"
                             android:textAlignment="center"
                             android:textColor="@color/cardview_dark_background"
-                            android:textSize="16sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -576,6 +516,70 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/payment_setup_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:layout_marginBottom="@dimen/spacing_20dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#F2994A"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/font_10"
+                    android:paddingBottom="@dimen/font_10"
+                    android:weightSum="100">
+
+                    <FrameLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_vertical"
+                            android:src="@drawable/asd"
+                            android:tint="@color/white" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/payment_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="100"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/font_10"
+                        android:text="Payment Setup Pending"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/settings_right_icon_1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:autoMirrored="true"
+                        android:src="@drawable/ic_baseline_chevron_right_24"
+                        android:tint="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/notif_text"
