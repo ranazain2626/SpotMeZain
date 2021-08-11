@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -23,11 +24,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +44,8 @@ import com.munib.spotme.dataModels.ProposedMoneyModel;
 import com.munib.spotme.dataModels.UserModel;
 import com.munib.spotme.utils.RecyclerItemClickListener;
 
+import org.w3c.dom.Text;
+
 import java.io.ByteArrayOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,6 +53,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -63,8 +69,9 @@ public class RequestMoneyActivity extends BaseActivity {
     ArrayList<UserModel> arrayList;
     Spinner duration;
     Boolean selected=false,signed=false;
-    LinearLayout layout_amount_interest;
+    CardView layout_amount_interest;
     TextView amountAfterLoan;
+    ProgressBar progressBar;
     CardView proposed_payment_card;
     String url="",selected_user_token="";
     int selected_duration;
@@ -85,28 +92,29 @@ public class RequestMoneyActivity extends BaseActivity {
         });
 
         arrayList=new ArrayList<>();
+        progressBar=(ProgressBar) findViewById(R.id.progressBar2);
         username=(EditText) findViewById(R.id.edtUsername);
         rv=(RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(this));
         adapter=new SearchSpotMeUsersAdapter(this,arrayList);
         rv.setAdapter(adapter);
 
-        layout_amount_interest=(LinearLayout) findViewById(R.id.layout_amount_interest);
-        amountAfterLoan=(EditText) findViewById(R.id.amountAfterLoan);
+        layout_amount_interest=(CardView) findViewById(R.id.layout_amount_interest);
+        amountAfterLoan=(TextView) findViewById(R.id.amountAfterLoan);
         proposed_payment_card=(CardView) findViewById(R.id.proposed_payment_card);
         proposed_payment_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 LayoutInflater factory = LayoutInflater.from(RequestMoneyActivity.this);
                 final View deleteDialogView = factory.inflate(R.layout.dialog_proposed_payments, null);
-                final AlertDialog deleteDialog = new AlertDialog.Builder(RequestMoneyActivity.this).create();
-                deleteDialog.setView(deleteDialogView);
+                BottomSheetDialog deleteDialog = new BottomSheetDialog(RequestMoneyActivity.this,R.style.BottomSheetDialog);
+                deleteDialog.setContentView(deleteDialogView);
                 deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                 RecyclerView rv1=(RecyclerView) deleteDialogView.findViewById(R.id.rv);
                 rv1.setLayoutManager(new LinearLayoutManager(RequestMoneyActivity.this));
 
-                TextView ok_btn=(TextView) deleteDialogView.findViewById(R.id.ok_btn);
+                ImageView ok_btn=(ImageView) deleteDialogView.findViewById(R.id.ok_btn);
                 ok_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -245,8 +253,8 @@ public class RequestMoneyActivity extends BaseActivity {
 
                     LayoutInflater factory = LayoutInflater.from(RequestMoneyActivity.this);
                     final View deleteDialogView = factory.inflate(R.layout.dialog_loan_agreement, null);
-                    final AlertDialog deleteDialog = new AlertDialog.Builder(RequestMoneyActivity.this).create();
-                    deleteDialog.setView(deleteDialogView);
+                    BottomSheetDialog deleteDialog = new BottomSheetDialog(RequestMoneyActivity.this,R.style.BottomSheetDialog);
+                    deleteDialog.setContentView(deleteDialogView);
                     deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                     WebView webView=(WebView) deleteDialogView.findViewById(R.id.webview);
@@ -514,6 +522,7 @@ public class RequestMoneyActivity extends BaseActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (!s.toString().equals("")) {
+                    progressBar.setVisibility(View.VISIBLE);
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users");
                     ref.orderByChild("username").startAt(s.toString()).addValueEventListener(new ValueEventListener() {
                         @Override
@@ -522,8 +531,18 @@ public class RequestMoneyActivity extends BaseActivity {
                                 arrayList.clear();
                                 for (DataSnapshot datas : dataSnapshot.getChildren()) {
                                     Log.d(TAGZ, datas.toString());
-                                    UserModel user = datas.getValue(UserModel.class);
+                                    Map<String, Object> map = (Map<String, Object>) datas.getValue();
+                                    UserModel user = new UserModel();
                                     user.setUid(datas.getKey());
+                                    try {
+                                        user.setImage_url(map.get("image_url").toString());
+                                    }catch (Exception ex)
+                                    {
+
+                                    }
+                                    user.setName(map.get("name").toString());
+                                    user.setUsername(map.get("username").toString());
+                                    //  user.setUid(datas.getKey());
                                     if(!user.getUid().equals(auth.getCurrentUser().getUid()))
                                         arrayList.add(user);
                                 }
@@ -532,12 +551,13 @@ public class RequestMoneyActivity extends BaseActivity {
                                 arrayList.clear();
                                 adapter.notifyDataSetChanged();
                             }
+                            progressBar.setVisibility(View.GONE);
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
                             Log.d(TAGZ, error.getDetails());
-
+                            progressBar.setVisibility(View.GONE);
                         }
                     });
                 } else {

@@ -96,6 +96,14 @@
                             android:paddingEnd="@dimen/spacing_20dp"
                             android:textSize="@dimen/font_16" />
 
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone" />
+
                         <EditText
                             android:id="@+id/selectedUsername"
                             android:layout_width="match_parent"
@@ -122,7 +130,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="-10dp"
                             android:layout_marginRight="-10dp"
-                            android:visibility="gone">
+                            android:visibility="visible">
 
                         </androidx.recyclerview.widget.RecyclerView>
 
@@ -214,11 +222,12 @@
                             android:clickable="false"
                             android:drawableTint="#4A4A4A"
                             android:editable="false"
+                            android:gravity="center_vertical"
                             android:imeOptions="actionNext"
                             android:inputType="number"
                             android:paddingStart="@dimen/spacing_20dp"
                             android:paddingEnd="@dimen/spacing_20dp"
-                            android:textColorHint="@color/black"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/font_16" />
 
                     </LinearLayout>
@@ -343,7 +352,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="230dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/custom_btn"
                 android:gravity="center"

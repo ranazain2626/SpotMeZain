@@ -17,18 +17,22 @@ import android.webkit.WebViewClient;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.munib.spotme.BrowseActivity;
+import com.munib.spotme.BrowseRequestMoneyActivity;
 import com.munib.spotme.CounterActivity;
 import com.munib.spotme.AddCardActivity;
+import com.munib.spotme.LendMoneyActivity;
 import com.munib.spotme.LoanPayActivity;
 import com.munib.spotme.MainActivity;
 import com.munib.spotme.R;
@@ -229,14 +233,14 @@ public class RequestBrowseAdapter extends RecyclerView.Adapter<RequestBrowseAdap
                 public void onClick(View view) {
                     LayoutInflater factory = LayoutInflater.from(mContext);
                     final View deleteDialogView = factory.inflate(R.layout.dialog_proposed_payments, null);
-                    final AlertDialog deleteDialog = new AlertDialog.Builder(mContext).create();
-                    deleteDialog.setView(deleteDialogView);
+                    BottomSheetDialog deleteDialog = new BottomSheetDialog(mContext,R.style.BottomSheetDialog);
+                    deleteDialog.setContentView(deleteDialogView);
                     deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                     RecyclerView rv1=(RecyclerView) deleteDialogView.findViewById(R.id.rv);
                     rv1.setLayoutManager(new LinearLayoutManager(mContext));
 
-                    TextView ok=deleteDialogView.findViewById(R.id.ok_btn);
+                    ImageView ok=deleteDialogView.findViewById(R.id.ok_btn);
                     ok.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -352,8 +356,8 @@ public class RequestBrowseAdapter extends RecyclerView.Adapter<RequestBrowseAdap
 
                         LayoutInflater factory = LayoutInflater.from(mContext);
                         final View deleteDialogView = factory.inflate(R.layout.dialog_loan_agreement, null);
-                        final AlertDialog deleteDialog = new AlertDialog.Builder(mContext).create();
-                        deleteDialog.setView(deleteDialogView);
+                        BottomSheetDialog deleteDialog = new BottomSheetDialog(mContext,R.style.BottomSheetDialog);
+                        deleteDialog.setContentView(deleteDialogView);
                         deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                         WebView webView=(WebView) deleteDialogView.findViewById(R.id.webview);

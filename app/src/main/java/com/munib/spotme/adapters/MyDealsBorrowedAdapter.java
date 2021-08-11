@@ -5,22 +5,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.munib.spotme.AgreementActivity;
+import com.munib.spotme.BrowseRequestMoneyActivity;
 import com.munib.spotme.MainActivity;
 import com.munib.spotme.LoanPayActivity;
 import com.munib.spotme.PayInstallmentsActivity;
@@ -335,14 +339,14 @@ public class MyDealsBorrowedAdapter extends RecyclerView.Adapter<MyDealsBorrowed
                 public void onClick(View view) {
                     LayoutInflater factory = LayoutInflater.from(mContext);
                     final View deleteDialogView = factory.inflate(R.layout.dialog_proposed_payments, null);
-                    final AlertDialog deleteDialog = new AlertDialog.Builder(mContext).create();
-                    deleteDialog.setView(deleteDialogView);
+                    BottomSheetDialog deleteDialog = new BottomSheetDialog(mContext,R.style.BottomSheetDialog);
+                    deleteDialog.setContentView(deleteDialogView);
                     deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                     RecyclerView rv1=(RecyclerView) deleteDialogView.findViewById(R.id.rv);
                     rv1.setLayoutManager(new LinearLayoutManager(mContext));
 
-                    TextView ok=deleteDialogView.findViewById(R.id.ok_btn);
+                    ImageView ok=deleteDialogView.findViewById(R.id.ok_btn);
                     ok.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

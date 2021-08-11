@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ import com.squareup.picasso.Picasso;
 import com.stripe.android.model.Card;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import static com.munib.spotme.utils.CommonUtils.TAGZ;
 
@@ -35,7 +37,7 @@ public class UserProfileActivity extends BaseActivity {
     String user_id;
     TextView lender_rating,borrower_rating,name,username,email,phone,lender_ratings_txt,borrower_rating_txt,total_loaned,total_borrowed,total_shares,total_invested;
     ImageView user_image;
-    CardView btn_offer,btn_request;
+    Button btn_offer,btn_request;
     RecyclerView rv;
     FrameLayout msg;
     int total_loaned_value=0,total_borrowed_value=0;
@@ -77,8 +79,8 @@ public class UserProfileActivity extends BaseActivity {
         total_invested=(TextView) findViewById(R.id.total_investment);
         user_image=(ImageView) findViewById(R.id.image);
 
-        btn_offer=(CardView) findViewById(R.id.offer_btn);
-        btn_request=(CardView) findViewById(R.id.request_btn);
+        btn_offer=(Button) findViewById(R.id.offer_btn);
+        btn_request=(Button) findViewById(R.id.request_btn);
         msg=findViewById(R.id.msg);
 
         btn_offer.setOnClickListener(new View.OnClickListener() {
@@ -119,15 +121,21 @@ public class UserProfileActivity extends BaseActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
                             Log.d(TAGZ, dataSnapshot.toString());
-                            UserModel offer = dataSnapshot.getValue(UserModel.class);
-                            offer.setUid(dataSnapshot.getKey());
+                             Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+                             UserModel user = new UserModel();
+                             user.setUid(dataSnapshot.getKey());
+                            try {
+                                user.setImage_url(map.get("image_url").toString());
+                                Picasso.get().load(map.get("image_url").toString()).into(user_image);
+                              }catch (Exception ex)
+                            {
 
-                            name.setText(offer.getName());
-                            username.setText("@"+offer.getUsername());
-                            email.setText(offer.getEmail());
-                            phone.setText(offer.getPhone());
-                            if(!offer.getImage_url().equals(""))
-                            Picasso.get().load(offer.getImage_url()).into(user_image);
+                            }
+                            name.setText(map.get("name").toString());
+                            username.setText("@"+map.get("username").toString());
+//                            email.setText(offer.getEmail());
+//                            phone.setText(offer.getPhone());
+
                     } else {
 
                     }

@@ -21,7 +21,7 @@
         android:layout_marginEnd="@dimen/spacing_10dp"
         android:layout_marginBottom="10dp"
         android:elevation="@dimen/spacing_10dp"
-        app:cardCornerRadius="11dp">
+        app:cardCornerRadius="6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,8 +54,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_vertical"
-                            app:tint="#FFFFFF"
-                            android:src="@drawable/message_icon" />
+                            android:src="@drawable/message_icon"
+                            app:tint="#FFFFFF" />
                     </FrameLayout>
 
                     <FrameLayout
@@ -110,7 +110,7 @@
                                 app:srcCompat="@drawable/wating_icon" />
 
                             <TextView
-                                android:id="@+id/textView55"
+                                android:id="@+id/status_msg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="2dp"
@@ -240,17 +240,10 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/status_msg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:textAlignment="center" />
-
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
+                        android:layout_marginTop="15dp"
                         android:background="@color/cardview_shadow_start_color">
 
                     </FrameLayout>
@@ -259,14 +252,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
-                        android:layout_marginBottom="5dp"
                         android:gravity="right"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/decline_button"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="35dp"
                             android:layout_weight="1"
                             android:background="@drawable/decline_btn"
                             android:gravity="center"
@@ -278,7 +270,7 @@
                         <TextView
                             android:id="@+id/payments_btn"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/accept_btn"
@@ -293,8 +285,8 @@
                     <TextView
                         android:id="@+id/pay_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:background="@drawable/custom_btn"
                         android:gravity="center"

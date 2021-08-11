@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
@@ -12,7 +13,6 @@
     app:contentPadding="@dimen/spacing_10dp">
 
     <LinearLayout
-        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -29,34 +29,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <FrameLayout
-                    android:id="@+id/fm1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/custom_icon_back1"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/notification_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1"
-                        android:text="1"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:visibility="gone" />
-                </FrameLayout>
-
-                <FrameLayout
+                <RelativeLayout
                     android:id="@+id/fm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginEnd="@dimen/spacing_10dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -66,7 +42,31 @@
                         android:src="@drawable/com_facebook_profile_picture_blank_square"
                         app:civ_border_color="@color/white"
                         app:civ_border_width="0.5dp" />
-                </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fm1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/custom_edit_background"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/notification_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

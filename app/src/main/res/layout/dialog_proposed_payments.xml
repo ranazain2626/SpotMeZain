@@ -3,9 +3,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="500dp"
-    android:layout_marginBottom="20dp"
-    app:cardCornerRadius="11dp"
+    android:layout_height="600dp"
+    android:layout_marginBottom="-20dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="2dp">
 
     <LinearLayout
@@ -18,20 +18,32 @@
         <LinearLayout
             android:id="@+id/pay_layout"
             android:layout_width="match_parent"
-            android:layout_height="380dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:orientation="vertical"
             android:visibility="visible">
 
-            <TextView
-                android:id="@+id/textView38"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Proposed Payments"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="normal" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ok_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/cancel_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Proposed Payments"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/textView13"
@@ -42,7 +54,7 @@
                 android:text="Here is your monthly payment schedule"
                 android:textColor="#A7A7B0"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"
@@ -50,21 +62,6 @@
                 android:layout_height="match_parent" />
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/ok_btn"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/spacing_20dp"
-            android:background="@drawable/custom_btn"
-            android:gravity="center"
-            android:text="Okay"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:visibility="visible" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

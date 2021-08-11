@@ -213,7 +213,7 @@ public class HomeFragment extends BaseFragment {
             public void onClick(View view) {
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 Boolean charges_enabled = preferences.getBoolean("charges_enabled", false);
-                if(!charges_enabled){
+                if(charges_enabled){
                     startActivity(new Intent(getActivity(), RequestMoneyActivity.class));
                 }else{
                     showMessage("Please activate your payment setup before making a request to someone");
@@ -227,7 +227,7 @@ public class HomeFragment extends BaseFragment {
             public void onClick(View view) {
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                 Boolean charges_enabled = preferences.getBoolean("charges_enabled", false);
-                if(!charges_enabled){
+                if(charges_enabled){
                     startActivity(new Intent(getActivity(), LendMoneyActivity.class));
                 }else{
                     showMessage("Please activate your payment setup before making a request to someone");

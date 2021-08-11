@@ -68,7 +68,7 @@
                 android:textColor="@color/colorPrimary" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/report_btn"
                 android:layout_width="88dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="8dp"

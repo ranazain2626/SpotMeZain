@@ -20,7 +20,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/signup_background"
                 android:orientation="vertical">
 
@@ -170,7 +170,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="$800,000.00"
+                        android:text="$0.00"
                         android:textColor="#FFFFFF"
                         android:textSize="32sp"
                         android:textStyle="bold" />
@@ -200,7 +200,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/total_loaned"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="LOAND"
@@ -208,7 +207,7 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/textView14"
+                                    android:id="@+id/total_loaned"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="$0.00"
@@ -237,7 +236,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/total_borrowed"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="BORROWED"
@@ -245,10 +243,10 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/textView14"
+                                    android:id="@+id/total_borrowed"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="$100.00"
+                                    android:text="$0.00"
                                     android:textColor="@color/white"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
@@ -358,7 +356,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="-75dp"
+                android:layout_marginTop="-85dp"
                 android:layout_marginEnd="15dp"
                 android:orientation="horizontal"
                 android:visibility="visible">

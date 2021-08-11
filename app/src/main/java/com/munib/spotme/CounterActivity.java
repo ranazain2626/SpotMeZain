@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -29,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -159,12 +161,12 @@ public class CounterActivity extends BaseActivity {
             public void onClick(View view) {
                 LayoutInflater factory = LayoutInflater.from(CounterActivity.this);
                 final View deleteDialogView = factory.inflate(R.layout.dialog_proposed_payments, null);
-                final AlertDialog deleteDialog = new AlertDialog.Builder(CounterActivity.this).create();
-                deleteDialog.setView(deleteDialogView);
+                BottomSheetDialog deleteDialog = new BottomSheetDialog(CounterActivity.this,R.style.BottomSheetDialog);
+                deleteDialog.setContentView(deleteDialogView);
                 deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                 RecyclerView rv1=(RecyclerView) deleteDialogView.findViewById(R.id.rv);
-                TextView ok_btn=(TextView) deleteDialogView.findViewById(R.id.ok_btn);
+                ImageView ok_btn=(ImageView) deleteDialogView.findViewById(R.id.ok_btn);
                 ok_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -289,8 +291,8 @@ public class CounterActivity extends BaseActivity {
 
                   LayoutInflater factory = LayoutInflater.from(CounterActivity.this);
                   final View deleteDialogView = factory.inflate(R.layout.dialog_loan_agreement, null);
-                  final AlertDialog deleteDialog = new AlertDialog.Builder(CounterActivity.this).create();
-                  deleteDialog.setView(deleteDialogView);
+                  BottomSheetDialog deleteDialog = new BottomSheetDialog(CounterActivity.this,R.style.BottomSheetDialog);
+                  deleteDialog.setContentView(deleteDialogView);
                   deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
                   WebView webView=(WebView) deleteDialogView.findViewById(R.id.webview);

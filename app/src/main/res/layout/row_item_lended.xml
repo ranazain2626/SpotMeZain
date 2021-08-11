@@ -20,7 +20,7 @@
         android:layout_marginEnd="@dimen/spacing_10dp"
         android:layout_marginBottom="10dp"
         android:elevation="@dimen/spacing_10dp"
-        app:cardCornerRadius="11dp">
+        app:cardCornerRadius="6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -443,13 +443,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/agreement_btn"
                             android:layout_width="0dp"
-                            android:layout_height="32dp"
+                            android:layout_height="35dp"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/decline_btn"
@@ -463,7 +463,7 @@
                         <TextView
                             android:id="@+id/payments_btn"
                             android:layout_width="0dp"
-                            android:layout_height="32dp"
+                            android:layout_height="35dp"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/accept_btn"
@@ -477,7 +477,7 @@
                         <TextView
                             android:id="@+id/rate_lender"
                             android:layout_width="0dp"
-                            android:layout_height="32dp"
+                            android:layout_height="35dp"
                             android:layout_weight="1"
                             android:background="@drawable/custom_btn"
                             android:gravity="center"
@@ -560,19 +560,11 @@
 
                 </LinearLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/cardview_shadow_start_color">
-
-                </FrameLayout>
-
                 <TextView
                     android:id="@+id/give_extension_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/custom_btn_red"
                     android:gravity="center"
@@ -581,7 +573,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
             </LinearLayout>
 

@@ -7,160 +7,168 @@
     android:orientation="vertical"
     tools:context=".RequestMoneyActivity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/money_backound"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/back_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
-                android:text="Request Money"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="normal" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/covid_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_20dp"
-        android:layout_marginTop="-210dp"
-        android:layout_marginEnd="@dimen/spacing_20dp"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="11dp"
-        app:cardElevation="2dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/money_backound"
                 android:orientation="vertical">
 
-
-                <TextView
-                    android:id="@+id/textView6"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SpotMe Username"
-                    android:textAllCaps="true" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/edtUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_50dp"
-                    android:layout_marginTop="@dimen/spacing_5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:drawablePadding="5dp"
-                    android:hint="@maximus78"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:paddingStart="@dimen/spacing_20dp"
-                    android:paddingEnd="@dimen/spacing_20dp"
-                    android:textColor="@color/cardview_shadow_start_color"
-                    android:textSize="@dimen/font_16" />
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_back_24" />
 
-                <EditText
-                    android:id="@+id/selectedUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_50dp"
-                    android:layout_marginTop="@dimen/spacing_5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
-                    android:drawablePadding="5dp"
-                    android:editable="false"
-                    android:focusable="false"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress|textCapSentences"
-                    android:paddingStart="@dimen/spacing_20dp"
-                    android:paddingEnd="@dimen/spacing_20dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/black"
-                    android:textSize="@dimen/font_16"
-                    android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="-25dp"
+                        android:text="Request Money"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
+            </RelativeLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="-10dp"
-                    android:layout_marginRight="-10dp"
-                    android:visibility="gone">
-
-                </androidx.recyclerview.widget.RecyclerView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/covid_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginTop="-200dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:id="@+id/layout_amount_interest"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="vertical">
 
+
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/textView6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="Amount after interest"
-                            android:textAlignment="center" />
+                            android:text="SpotMe Username"
+                            android:textAllCaps="true"
+                            android:textColor="#A7A7B0"
+                            android:textSize="12sp" />
 
                         <EditText
-                            android:id="@+id/amountAfterLoan"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/edtUsername"
+                            android:layout_width="match_parent"
                             android:layout_height="@dimen/spacing_50dp"
-                            android:layout_gravity="center"
                             android:layout_marginTop="@dimen/spacing_5dp"
-                            android:background="@drawable/custom_icon_back1"
+                            android:background="@drawable/custom_edit_text"
                             android:drawablePadding="5dp"
+                            android:hint="@maximus78"
                             android:imeOptions="actionNext"
                             android:inputType="text"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:text="$ 20.00"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
+                            android:textSize="@dimen/font_16" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/selectedUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_edit_text"
+                            android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+                            android:drawablePadding="5dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress|textCapSentences"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
                             android:textColor="@color/colorPrimaryDark"
                             android:textColorHint="@color/black"
-                            android:textSize="30sp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/font_16"
+                            android:visibility="gone" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:visibility="visible">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_10dp"
+                            android:text="Amount"
+                            android:textAllCaps="true"
+                            android:textColor="#A7A7B0"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edtAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_edit_text"
+                            android:hint="e.g 1000"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
+                            android:textSize="@dimen/font_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -169,7 +177,98 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/spacing_10dp"
-                            android:text="Duration of loan" />
+                            android:text="Interest Rate"
+                            android:textAllCaps="true"
+                            android:textColor="#A7A7B0"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edtInterestRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_edit_text"
+                            android:drawableTint="#4A4A4A"
+                            android:hint="e.g 2%"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
+                            android:textSize="@dimen/font_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_10dp"
+                            android:text="Amount After Interest"
+                            android:textAllCaps="true"
+                            android:textColor="#A7A7B0"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/amountAfterLoan"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_50dp"
+                            android:layout_marginTop="@dimen/spacing_5dp"
+                            android:background="@drawable/custom_edit_text"
+                            android:clickable="false"
+                            android:drawableTint="#4A4A4A"
+                            android:editable="false"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/spacing_20dp"
+                            android:paddingEnd="@dimen/spacing_20dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layout_amount_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:layout_marginBottom="@dimen/spacing_20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                            android:textColor="#A7A7B0"
+                            android:textSize="12sp" />
 
                         <Spinner
                             android:id="@+id/edtDuration"
@@ -186,199 +285,84 @@
                     </LinearLayout>
 
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/proposed_payment_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:layout_marginBottom="@dimen/spacing_20dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#E9FFF2"
+                app:cardCornerRadius="11dp">
 
                 <LinearLayout
-                    android:id="@+id/scanner_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/font_10"
-                    android:layout_marginBottom="@dimen/font_10"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:layout_marginEnd="10dp"
                     android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:paddingTop="@dimen/font_10"
+                    android:paddingBottom="@dimen/font_10"
+                    android:weightSum="100">
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:tint="@color/colorPrimary" />
+                    <FrameLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_vertical"
+                            android:src="@drawable/lend"
+                            android:tint="@color/colorPrimary" />
+                    </FrameLayout>
 
                     <TextView
-                        android:id="@+id/textz"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Place your finger on scanner to validate" />
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="100"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/font_10"
+                        android:text="Proposed Payments"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
 
+                    <ImageView
+                        android:id="@+id/settings_right_icon_1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:autoMirrored="true"
+                        android:src="@drawable/ic_baseline_chevron_right_24"
+                        android:tint="@color/colorPrimaryDark" />
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10dp"
-                    android:text="Amount"
-                    android:textAllCaps="true" />
-
-                <EditText
-                    android:id="@+id/edtAmount"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_50dp"
-                    android:layout_marginTop="@dimen/spacing_5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:hint="$1500"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:paddingStart="@dimen/spacing_20dp"
-                    android:paddingEnd="@dimen/spacing_20dp"
-                    android:textSize="@dimen/font_16" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10dp"
-                    android:text="Interest Rate"
-                    android:textAllCaps="true" />
-
-                <EditText
-                    android:id="@+id/edtInterestRate"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_50dp"
-                    android:layout_marginTop="@dimen/spacing_5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:drawableTint="#4A4A4A"
-                    android:hint="2%"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:paddingStart="@dimen/spacing_20dp"
-                    android:paddingEnd="@dimen/spacing_20dp"
-                    android:textSize="@dimen/font_16" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10dp"
-                    android:text="Amount After Interest"
-                    android:textAllCaps="true" />
-
-                <TextView
-                    android:id="@+id/edtAmount"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/spacing_50dp"
-                    android:layout_marginTop="@dimen/spacing_5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:editable="false"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:paddingStart="@dimen/spacing_20dp"
-                    android:paddingEnd="@dimen/spacing_20dp"
-                    android:textColorHint="@color/black"
-                    android:textSize="@dimen/font_16" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/proposed_payment_card"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="@dimen/spacing_20dp"
-        android:layout_marginEnd="@dimen/spacing_20dp"
-        android:layout_marginBottom="@dimen/spacing_20dp"
-        android:visibility="gone"
-        app:cardCornerRadius="11dp"
-        app:cardElevation="2dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/spacing_10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/font_10"
-            android:paddingBottom="@dimen/font_10"
-            android:weightSum="100">
-
-            <FrameLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/custom_icon_back1"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|center_vertical"
-                    android:src="@drawable/asd"
-                    android:tint="@color/colorPrimaryDark" />
-            </FrameLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="100"
-                android:gravity="center_vertical"
-                android:paddingStart="@dimen/font_10"
-                android:text="Proposed Payments"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
+                android:id="@+id/lend_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_btn"
+                android:gravity="center"
+                android:text="Send Request"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="normal" />
 
-            <ImageView
-                android:id="@+id/settings_right_icon_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="5"
-                android:autoMirrored="true"
-                android:src="@drawable/ic_baseline_chevron_right_24"
-                android:tint="@color/colorPrimaryDark" />
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/lend_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/spacing_50dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/custom_btn"
-        android:gravity="center"
-        android:text="Send Request "
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="normal" />
+    </ScrollView>
 
 </LinearLayout>

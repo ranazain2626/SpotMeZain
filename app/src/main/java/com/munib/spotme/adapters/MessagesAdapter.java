@@ -142,6 +142,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Restau
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Log.d("mubi","as");
                     Intent a=new Intent(mContext, SendMessageActivity.class);
                     a.putExtra("uid1",((MainActivity) mContext).auth.getCurrentUser().getUid());
                     a.putExtra("uid2",restaurant.getChat_with());
