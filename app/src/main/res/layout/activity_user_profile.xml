@@ -94,8 +94,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:background="@drawable/signup_background"
+                android:layout_height="wrap_content"
+                android:background="@drawable/money_backound"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -108,26 +108,21 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".8"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/back_btn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
                     <TextView
                         android:id="@+id/textView57"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight=".2"
-                        android:text="Andrew Martin" />
+                        android:layout_weight="0.9"
+                        android:gravity="center"
+                        android:text="Andrew Martin"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -195,56 +190,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_star_24"
-                            android:tint="@color/white" />
-
-                        <TextView
-                            android:id="@+id/lender_rating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="N/A"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/lender_rating_txt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Lender\nRating"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/covid_card"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/spacing_20dp"
-                    android:layout_marginEnd="@dimen/spacing_20dp"
-                    app:cardCornerRadius="11dp"
-                    app:cardElevation="2dp">
-
-                    <ImageView
-                        android:id="@+id/image"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/com_facebook_profile_picture_blank_square" />
-                </androidx.cardview.widget.CardView>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -258,36 +206,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_star_24"
-                            android:tint="@color/white" />
-
-                        <TextView
-                            android:id="@+id/borrower_rating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="N/A"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/borrower_rating_txt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Borrower\nRating"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"/>
 
                 </LinearLayout>
 
@@ -296,28 +215,169 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="-120dp"
+                android:layout_marginRight="24dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/name"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Muneeb Rana"
-                    android:textAlignment="center"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    app:cardCornerRadius="6dp">
 
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@muneebrana"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/covid_card"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/spacing_20dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="@dimen/spacing_20dp"
+                            app:cardCornerRadius="40dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/com_facebook_profile_picture_blank_square" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Muneeb Rana"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@muneebrana"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="55dp"
+                            android:background="@color/cardview_shadow_start_color">
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/star_icon" />
+
+                                <TextView
+                                    android:id="@+id/lender_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="N/A"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/star_icon" />
+
+                                <TextView
+                                    android:id="@+id/borrower_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="N/A"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lender_rating_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Lender Rating"
+                                android:textAlignment="center"
+                                android:textColor="#A7A7B0"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/borrower_rating_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Borrower Rating"
+                                android:textAlignment="center"
+                                android:textColor="#A7A7B0"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -369,101 +429,107 @@
                         android:textSize="18sp" />
                 </LinearLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/cardview_shadow_start_color">
-
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/textView34"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Stats"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        app:cardCornerRadius="10dp">
 
-                        <TextView
-                            android:id="@+id/textView17"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="Loaned"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/font_14" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                        <FrameLayout
-                            android:id="@+id/fm1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/custom_icon_back1"
-                            android:padding="5dp">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/total_loaned"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
                                 android:layout_weight="1"
-                                android:text="£ 0"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="20sp" />
-                        </FrameLayout>
-                    </LinearLayout>
+                                android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Borrowed"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/font_14" />
 
-                        <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="Borrowed"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/font_14" />
+                                <FrameLayout
+                                    android:id="@+id/fm1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:padding="5dp">
 
-                        <FrameLayout
-                            android:id="@+id/fm1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/custom_icon_back1"
-                            android:padding="5dp">
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/total_borrowed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1"
+                                        android:text="£ 100"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="20sp" />
+                                </FrameLayout>
+                            </LinearLayout>
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/total_borrowed"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
+                            <FrameLayout
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@color/cardview_shadow_start_color">
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
                                 android:layout_weight="1"
-                                android:text="£ 100"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="20sp" />
-                        </FrameLayout>
-                    </LinearLayout>
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Loaned"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/font_14" />
+
+                                <FrameLayout
+                                    android:id="@+id/fm1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:padding="5dp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/total_loaned"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1"
+                                        android:text="£ 0"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="20sp" />
+                                </FrameLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -541,14 +607,6 @@
                         </FrameLayout>
                     </LinearLayout>
                 </LinearLayout>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/cardview_shadow_start_color">
-
-                </FrameLayout>
 
                 <TextView
                     android:id="@+id/textView35"
